@@ -67,9 +67,7 @@ class Simulation extends React.Component {
 
             <div class="mx-auto mt-20 text-2xl w-full text-center font-helvetica">
               <div>
-                <p>
-                  ------------------ PLAY DO FUTURO (Free) ------------------
-                </p>
+                <p>PLAY DO FUTURO (Free)</p>
                 {!green ? (
                   <button
                     class="bg-green-800 text-2xl text-white ol-start-1 col-span-9 my-14 rounded-xl h-16 w-42 hover:bg-green-600 hover:text-white transition-all inline-flex items-center px-4 py-2 gap-2"
@@ -83,14 +81,16 @@ class Simulation extends React.Component {
                   <BotOperator />
                 )}
               </div>
-              <div class="text-lg px-6 py-2 w-5/6 mx-auto md:mx-auto md:w-1/2 grid grid-cols-10 gap:1 md:gap-4 bg-slate-900">
-                <p class="col-start-1 col-span-6 md:col-span-7 text-left">
+              <div class="text-base md:text-lg px-6 py-2 w-5/6 mx-auto md:mx-auto md:w-1/2 grid grid-cols-10 gap:1 md:gap-4 bg-slate-900">
+                <p class="col-start-1 col-span-5 md:col-span-7 text-left">
                   Hora
                 </p>
-                <p class="text-left col-span-2 md:col-span-2 md:gap-8">
+                <p class="text-left col-start-6 col-span-2 md:col-span-2 md:gap-8">
                   Entrada
                 </p>
-                <p class="text-left col-span-2 md:col-span-1 ">Lucro/Perda</p>
+                <p class="text-left col-start-9 col-span-2 md:col-span-1 ">
+                  Lucro/Perda
+                </p>
               </div>
             </div>
             {click[1]}
