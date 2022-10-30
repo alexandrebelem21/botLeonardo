@@ -1,7 +1,7 @@
 {
   "name": "bot-binary",
   "version": "0.1.0",
-  "homepage": "bot-binary/",
+  "homepage": "botLeonardo/",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.5",
