@@ -21,9 +21,8 @@ class Simulation extends React.Component {
 
   handleClick = async () => {
     let { i, valor, click, lucro, saldo, green } = this.state;
-    let time = Math.floor(Math.random() * (8 - 4 + 1)) + 4;
+    let time = Math.floor(Math.random() * (10 - 5 + 1)) + 4;
     time = time * 1000;
-    console.log(time);
     if (i < 1) {
       green = true;
       valor = prompt("Entre com um valor acima de 0.35");
@@ -48,6 +47,7 @@ class Simulation extends React.Component {
         saldo,
       });
     } else {
+      alert("Você chegou no STOP GAIN!");
       this.setState({
         contact: true,
       });
@@ -68,8 +68,7 @@ class Simulation extends React.Component {
             <div class="mx-auto mt-20 text-2xl w-full text-center font-helvetica">
               <div>
                 <p>
-                  ---------------------------------------------- PLAY DO FUTURO
-                  (Free) ----------------------------------------------
+                  ------------------ PLAY DO FUTURO (Free) ------------------
                 </p>
                 {!green ? (
                   <button
@@ -84,10 +83,14 @@ class Simulation extends React.Component {
                   <BotOperator />
                 )}
               </div>
-              <div class="text-lg mx-auto px-6 py-2 w-1/2 grid grid-cols-10 gap-4 bg-slate-900">
-                <p class="col-start-1 col-span-8 text-left">Hora</p>
-                <p class="text-left">Entrada</p>
-                <p class="text-left">Lucro/Perda</p>
+              <div class="text-lg px-6 py-2 w-5/6 mx-auto md:mx-auto md:w-1/2 grid grid-cols-10 gap:1 md:gap-4 bg-slate-900">
+                <p class="col-start-1 col-span-6 md:col-span-7 text-left">
+                  Hora
+                </p>
+                <p class="text-left col-span-2 md:col-span-2 md:gap-8">
+                  Entrada
+                </p>
+                <p class="text-left col-span-2 md:col-span-1 ">Lucro/Perda</p>
               </div>
             </div>
             {click[1]}

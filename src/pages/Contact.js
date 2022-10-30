@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 class Contact extends React.Component {
   render() {
     return (
-      <div class="font-helvetica flex mx-auto mt-40 content-center overflow-auto">
+      <div class="font-helvetica flex mx-auto mt-8 md:mt-40 content-center overflow-auto">
         <div class="border mx-auto h-full  shadow-sm p-6 text-center w-100 d-flex flex-col content-center items-center text-white w-96 rounded-bl rounded-tl-3xl rounded-br-3xl rounded-tr border-blue-500">
           <h2 class="mb-0 text-2xl">Fim do período de testes</h2>
           <div class="rounded mb-8 mt-3 w-100 h-1 max-w-2 opacity-30 text-white">

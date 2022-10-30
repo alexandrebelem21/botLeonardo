@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 class Welcome extends React.Component {
   render() {
     return (
-      <div class="font-helvetica flex mx-auto mt-40 content-center overflow-auto">
+      <div class="font-helvetica flex mx-auto mt-8 md:mt-40 content-center overflow-auto">
         <div class="border mx-auto h-full  shadow-sm p-6 text-center w-100 d-flex flex-col content-center items-center text-white w-96 rounded-bl rounded-tl-3xl rounded-br-3xl rounded-tr border-blue-500">
           <h2 class="mb-0 text-2xl">
             Seja bem vindo ao Teste do PLAY DO FUTURO
