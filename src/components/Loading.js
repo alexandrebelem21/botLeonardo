@@ -2,7 +2,7 @@ import React from "react";
 class Loading extends React.Component {
   componentDidMount() {
     window.setTimeout(function () {
-      window.location.href = "http://localhost:3000/Enjoy";
+      window.location.href = "https://botleonardo.vercel.app/Enjoy";
     }, 2000);
   }
 
