@@ -12,13 +12,13 @@ class Enjoy extends React.Component {
           <p class="mx-auto mb-8 text-xl md:text-2xl">
             Selecione um robô para operar
           </p>
-          <div class="mx-auto w-1/2">
+          <div class="md:mx-auto w-screen  md:w-[800px] p-1 mr-2">
             <ul class="text-sm md:text-lg w-full text-left bg-black ">
               <div
                 class="pl-3 md:pl-8 rounded-lg pb-4 pt-4 mb-1 grid grid-cols-10 bg-slate-800
                 transition-all duration-800 bg-gradient-to-l from-slate-800 via-slate-800 to-green-800 bg-size-200 bg-pos-100 hover:bg-pos-0"
               >
-                <div class="col-start-1 col-span-8 md:col-span-9">
+                <div class=" col-start-1 col-span-8 md:col-span-9">
                   <Link to="/Simulation">
                     <li>PLAY DO FUTURO (Conservador)</li>
                   </Link>

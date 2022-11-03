@@ -4,6 +4,7 @@ import Header from "../components/Header";
 import Contact from "./Contact";
 import { FiPlayCircle } from "react-icons/fi";
 import BotOperator from "../components/BotOperator";
+import { Link } from "react-router-dom";
 
 class Simulation extends React.Component {
   constructor() {
@@ -68,29 +69,42 @@ class Simulation extends React.Component {
             <div class="mx-auto mt-20 text-2xl w-full text-center font-helvetica">
               <div>
                 <p>PLAY DO FUTURO (Free)</p>
+
                 {!green ? (
-                  <button
-                    class="bg-green-800 text-2xl text-white ol-start-1 col-span-9 my-14 rounded-xl h-16 w-42 hover:bg-green-600 hover:text-white transition-all inline-flex items-center px-4 py-2 gap-2"
-                    type="button"
-                    onClick={this.handleClick}
-                  >
-                    <FiPlayCircle class="h-6 w-6" />
-                    Comecar
-                  </button>
+                  <div>
+                    <p class="mt-12">Robô Parado</p>
+                    <div class="flex justify-center gap-4">
+                      <button
+                        class="bg-green-800 text-2xl text-white my-14 rounded-xl h-16 w-42 hover:bg-green-600 hover:text-white transition-all inline-flex items-center px-4 py-2 gap-2"
+                        type="button"
+                        onClick={this.handleClick}
+                      >
+                        <FiPlayCircle class="h-6 w-6" />
+                        Comecar
+                      </button>
+                      <Link to="/Enjoy">
+                        <button
+                          class=" text-base border-solid border-[1px] text-white my-14 rounded-xl h-16 w-42 hover:bg-green-600 hover:text-white transition-all inline-flex items-center px-4 py-2 gap-2"
+                          type="button"
+                          onClick={this.handleClick}
+                        >
+                          Selecionar Outro Robô
+                        </button>
+                      </Link>
+                    </div>
+                  </div>
                 ) : (
                   <BotOperator />
                 )}
               </div>
-              <div class="text-base md:text-lg px-6 py-2 w-5/6 mx-auto md:mx-auto md:w-1/2 grid grid-cols-10 gap:1 md:gap-4 bg-slate-900">
-                <p class="col-start-1 col-span-5 md:col-span-7 text-left">
-                  Hora
-                </p>
-                <p class="text-left col-start-6 col-span-2 md:col-span-2 md:gap-8">
-                  Entrada
-                </p>
-                <p class="text-left col-start-9 col-span-2 md:col-span-1 ">
-                  Lucro/Perda
-                </p>
+              <div class="flex justify-between p-1 px-4  text-base md:text-lg w-screen md:w-[800px] md:mx-auto bg-slate-900">
+                <div class="flex">
+                  <p class="text-left">Hora</p>
+                </div>
+                <div class="flex justify-between gap-10">
+                  <p class="text-left">Entrada</p>
+                  <p class="text-left">Lucro/Perda</p>
+                </div>
               </div>
             </div>
             {click[1]}
