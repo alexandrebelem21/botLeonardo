@@ -49,7 +49,7 @@ class Account extends React.Component {
               transition-all duration-800 bg-gradient-to-l from-slate-800 via-slate-800 to-green-800 bg-size-200 bg-pos-100 hover:bg-pos-0"
               >
                 <div class=" col-start-1 col-span-8 md:col-span-9">
-                  <Link to="/Simulation">
+                  <Link to="/enjoy">
                     <li>
                       <p class="text-base">Conta virtual - VRTC3291816</p>
                       <p class="text-sm">$ 1.000,00 USD</p>
