@@ -6,6 +6,7 @@ import { FiPlayCircle } from "react-icons/fi";
 import BotOperator from "../components/BotOperator";
 import { Link } from "react-router-dom";
 import Progressbar from "../components/Progressbar";
+import DotContract from "../components/DotContract";
 
 class Simulation extends React.Component {
   constructor() {
@@ -30,13 +31,13 @@ class Simulation extends React.Component {
     this.setState({
       time,
     });
-    console.log("OLA", time);
     if (i < 1) {
       green = true;
       valor = prompt("Entre com um valor acima de 0.35");
       this.setState({
         valor,
         green,
+        i,
       });
     }
     saldo = 1000;
@@ -64,8 +65,7 @@ class Simulation extends React.Component {
   };
 
   render() {
-    let { click, lucro, contact, saldo, green, progress, time } = this.state;
-
+    const { click, lucro, contact, saldo, green, i, time } = this.state;
     return (
       <>
         {contact ? (
@@ -102,7 +102,16 @@ class Simulation extends React.Component {
                     </div>
                   </div>
                 ) : (
-                  <BotOperator />
+                  <>
+                    {i === 1 ? <DotContract time={time} /> : <p></p>}
+                    {i === 2 ? <DotContract time={time} /> : <p></p>}
+                    {i === 3 ? <DotContract time={time} /> : <p></p>}
+                    {i === 4 ? <DotContract time={time} /> : <p></p>}
+                    {i === 5 ? <DotContract time={time} /> : <p></p>}
+                    {i === 6 ? <DotContract time={time} /> : <p></p>}
+                    {/* <DotContract /> */}
+                    <BotOperator />
+                  </>
                 )}
               </div>
               <div class="flex justify-between p-1 px-4  text-base md:text-lg w-screen md:w-[800px] md:mx-auto bg-slate-900">

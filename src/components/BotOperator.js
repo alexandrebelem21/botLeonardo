@@ -1,49 +1,12 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { CiPause1 } from "react-icons/ci";
-import Robo from "../img/Robo.js";
 import "./BotOperator.css";
 
 class BotOperator extends React.Component {
   render() {
     return (
       <div>
-        {/* <div class="font-helvetica mx-auto my-12 px-6 py-4 ">
-          <p class="text-3xl"> Bot Operando </p>
-          <div class="progress-group-groups">
-            <div class="progress-group-bot">
-              <div class="float-text-progress">Analisando</div>
-              <div class="dot-progress-bot"></div>
-            </div>
-            <div class="progress-group-bot">
-              <div class="float-text-progress">Contrato aberto</div>
-              <div class="dot-progress-bot"></div>
-            </div>
-            <div class="progress-group-bot">
-              <div class="float-text-progress">Contrato fechado</div>
-              <div class="dot-progress-bot"></div>
-            </div>
-            <div class="line-progress-bot"></div>
-            <div class="line-progress-bot line-progress-bot-indicator"></div>
-          </div>
-        </div> */}
-        <div class="mb-0">
-          <div
-            class="text-3xl mt-6 mx-auto
-               animate-pulse"
-          >
-            Analisando...
-          </div>
-
-          <div
-            class=" mx-auto w-[400px] mt-5 mb-4
-                  "
-          >
-            <div class="h-20 w-20  spinner is-animating">
-              <Robo />
-            </div>
-          </div>
-        </div>
         <div>
           <Link to="/Enjoy">
             <button
