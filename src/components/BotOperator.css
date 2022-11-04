@@ -1,0 +1,23 @@
+@keyframes loading {
+  0% {
+    margin-right: 100%;
+    translate: 10px;
+    transform: rotate(0);
+  }
+
+  50% {
+    margin-right: 50%;
+    translate: 200px;
+    transform: rotate(360deg);
+  }
+
+  100% {
+    margin-right: 0%;
+    translate: 350px;
+    transform: rotate(720deg);
+  }
+}
+
+.spinner.is-animating {
+  animation: loading 4s linear infinite;
+}

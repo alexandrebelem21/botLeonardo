@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { CiPause1 } from "react-icons/ci";
+import Robo from "../img/Robo.js";
 import "./BotOperator.css";
 
 class BotOperator extends React.Component {
@@ -26,10 +27,27 @@ class BotOperator extends React.Component {
             <div class="line-progress-bot line-progress-bot-indicator"></div>
           </div>
         </div> */}
+        <div class="mb-0">
+          <div
+            class="text-3xl mt-6 mx-auto
+               animate-pulse"
+          >
+            Analisando...
+          </div>
+
+          <div
+            class=" mx-auto w-[400px] mt-5 mb-4
+                  "
+          >
+            <div class="h-20 w-20  spinner is-animating">
+              <Robo />
+            </div>
+          </div>
+        </div>
         <div>
           <Link to="/Enjoy">
             <button
-              class=" text-base border-red-500 border-solid border-[1px] text-red-600 my-14 rounded-xl h-16 w-42 hover:bg-red-600 hover:text-white transition-all inline-flex items-center px-4 py-2 gap-2"
+              class=" text-base border-red-500 border-solid border-[1px] text-red-600 mt-1 mb-12 rounded-xl h-16 w-42 hover:bg-red-600 hover:text-white transition-all inline-flex items-center px-4 py-2 gap-2"
               type="button"
             >
               <CiPause1 class="h-6 w-6" />

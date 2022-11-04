@@ -8,7 +8,7 @@ export default function Progressbar({ time }) {
   //   } else {
   //     console.log("NAO");
   //   }
-  console.log(time);
+  //   console.log(time);
 
   useEffect(() => {
     if (filled < 100 && isRunning) {
