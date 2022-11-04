@@ -1,9 +1,9 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import Header from "../components/Header";
-import Bitcoin from "../img/bitcoin.png";
+import Bitcoin from "../img/Bitcoin.js";
 
-import Usa from "../img/usa.png";
+import Usa from "../img/Usa.js";
 
 class Account extends React.Component {
   render() {
@@ -27,7 +27,7 @@ class Account extends React.Component {
                   </li>
                 </div>
                 <div class="mx-auto">
-                  <img class="w-6 h-6" alt="logo" src={Usa} />
+                  <Usa />
                 </div>
               </div>
               <div
@@ -41,7 +41,7 @@ class Account extends React.Component {
                   </li>
                 </div>
                 <div class="mx-auto">
-                  <img class="w-6 h-6" alt="logo" src={Bitcoin} />
+                  <Bitcoin />
                 </div>
               </div>
               <div
@@ -57,7 +57,7 @@ class Account extends React.Component {
                   </Link>
                 </div>
                 <div class="mx-auto">
-                  <img class="w-6 h-6" alt="logo" src={Usa} />
+                  <Usa />
                 </div>
               </div>
             </ul>

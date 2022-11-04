@@ -20,7 +20,7 @@ class Contact extends React.Component {
               <b class="text-white">Play do Futuro.</b>
             </p>
           </div>
-          <div class="bg-green-800 text-xl md:text-2xl text-white mt-12 rounded-xl h-auto w-auto mb-12 mx-24 md:mx-auto hover:bg-green-600 hover:text-white transition-all inline-flex items-center px-4 py-1 gap-2">
+          <div class="bg-green-800 text-xl md:text-2xl text-white mt-12 rounded-xl h-auto w-auto mb-12 mx-16 md:mx-auto hover:bg-green-600 hover:text-white transition-all inline-flex items-center px-4 py-1 gap-2">
             <button type="button" onClick={this.handleClick}>
               ADQUIRIR ACESSO AO PLAY DO FUTURO
             </button>

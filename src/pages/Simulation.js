@@ -5,6 +5,7 @@ import Contact from "./Contact";
 import { FiPlayCircle } from "react-icons/fi";
 import BotOperator from "../components/BotOperator";
 import { Link } from "react-router-dom";
+import Progressbar from "../components/Progressbar";
 
 class Simulation extends React.Component {
   constructor() {
@@ -17,13 +18,19 @@ class Simulation extends React.Component {
       valor: 0,
       contact: false,
       green: false,
+      progress: false,
+      time: 0,
     };
   }
 
   handleClick = async () => {
-    let { i, valor, click, lucro, saldo, green } = this.state;
+    let { i, valor, click, lucro, saldo, green, progress } = this.state;
     let time = Math.floor(Math.random() * (10 - 5 + 1)) + 4;
     time = time * 1000;
+    this.setState({
+      time,
+    });
+    console.log("OLA", time);
     if (i < 1) {
       green = true;
       valor = prompt("Entre com um valor acima de 0.35");
@@ -38,14 +45,15 @@ class Simulation extends React.Component {
       // const click = [];
       setTimeout(this.handleClick, time);
       click.push(<BotSimulador valor={valor} key={i} />);
-      console.log(click);
       lucro = valor * 0.9 * i - valor * 0.9;
       saldo = saldo + lucro;
+      progress = true;
       this.setState({
         click,
         i,
         lucro,
         saldo,
+        progress,
       });
     } else {
       alert("Você chegou no STOP GAIN!");
@@ -56,7 +64,7 @@ class Simulation extends React.Component {
   };
 
   render() {
-    let { click, lucro, contact, saldo, green } = this.state;
+    let { click, lucro, contact, saldo, green, progress, time } = this.state;
 
     return (
       <>
@@ -69,7 +77,7 @@ class Simulation extends React.Component {
             <div class="mx-auto mt-20 text-2xl w-full text-center font-helvetica">
               <div>
                 <p>PLAY DO FUTURO (Free)</p>
-
+                {/* <Progressbar progress={progress} time={time} /> */}
                 {!green ? (
                   <div>
                     <p class="mt-12">Robô Parado</p>
